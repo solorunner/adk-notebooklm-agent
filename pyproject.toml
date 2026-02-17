@@ -1,0 +1,27 @@
+[project]
+name = "adk-notebooklm-agent"
+version = "0.1.0"
+description = "Google ADK agent that wraps the NotebookLM CLI with smart research workflows"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11"
+authors = [
+    { name = "solorunner" },
+]
+dependencies = [
+    "google-adk>=1.0.0",
+    "google-genai>=1.0.0",
+    "notebooklm-mcp-cli>=0.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/solorunner/adk-notebooklm-agent"
+Repository = "https://github.com/solorunner/adk-notebooklm-agent"
+Issues = "https://github.com/solorunner/adk-notebooklm-agent/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["notebooklm_agent"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
